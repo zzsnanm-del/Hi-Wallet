@@ -1,7 +1,6 @@
 import { defineConfig } from 'vitest/config'
 import { loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
-import { homedir } from 'node:os'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -21,7 +20,7 @@ export default defineConfig(({ mode }) => {
   return {
     envDir: repoRoot,
     define: {
-      __APP_HOME_DIR__: JSON.stringify(process.env.HOME || homedir()),
+      __APP_HOME_DIR__: JSON.stringify(''),
     },
     plugins: [react()],
     server: {
