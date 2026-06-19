@@ -1,0 +1,35 @@
+# ROS 2 colcon 编译产物（含系统环境变量快照，可能泄露 token）
+build/
+install/
+
+# Node.js
+node_modules/
+src/ros_web_gui_app/dist/
+
+# Claude Code 本地配置
+.claude/
+CLAUDE.md
+
+# Agent 运行记录
+.agents/
+skills-lock.json
+
+# 日志
+log/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 环境变量（含 token，切勿提交）
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
